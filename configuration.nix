@@ -37,15 +37,16 @@
 
   homebrew = {
     enable = true;
-
-    onActivation = {
-      cleanup = "zap";
-      autoUpdate = true;
-      extraFlags = [ "--force" ];
-    };
-
+    onActivation.cleanup = "zap";
+    onActivation.autoUpdate = true;
+    onActivation.extraFlags = [ "--force" ];
+    brews = [
+      "herdr"
+    ];
     casks = [
       "wezterm"
+      "claude-code"
+      "codex"
     ];
   };
 }
